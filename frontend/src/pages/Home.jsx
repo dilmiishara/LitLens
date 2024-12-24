@@ -100,7 +100,7 @@ const Home = () => {
               max="5"
               value={ratingFilter}
               onChange={(e) => setRatingFilter(e.target.value)}
-              className="border-2 border-gray-500 px-2 py-1"
+              className="border-2 border-gray-500 px-2 py-1 text-black"
             />
             <button
               onClick={handleFilter}
@@ -114,7 +114,7 @@ const Home = () => {
             <select
               value={sortOption}
               onChange={(e) => setSortOption(e.target.value)}
-              className="border-2 border-gray-500 px-2 py-1"
+              className="border-2 border-gray-500 px-2 py-1 text-black"
             >
               <option value="">Select</option>
               <option value="asc">Ascending</option>
