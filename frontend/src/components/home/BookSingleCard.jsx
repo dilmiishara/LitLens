@@ -8,6 +8,7 @@ import { BsInfoCircle } from 'react-icons/bs';
 import { MdOutlineDelete } from 'react-icons/md'; // Added missing import
 import { useState } from "react";
 import BookModel from "./BookModel";
+import StarRating from "../StarRating";
 
 const BookSingleCard = ({ book }) => {
     const [showModal,setShowModal]= useState(false);
@@ -28,9 +29,13 @@ const BookSingleCard = ({ book }) => {
         <BiUserCircle className="text-red-300 text-2xl" />
         <h2 className="my-1">{book.author}</h2>
       </div>
-      <div>
+      {/* <div>
         <h4 className="my-2 text-gray-500">{book.rating}</h4>
+      </div> */}
+      <div>
+        <h4 className="my-2 text-gray-500"><StarRating rating={book.rating}/></h4>
       </div>
+      
       <div>
         <h4 className="my-2 text-gray-500">{book.reviewText}</h4>
       </div>
